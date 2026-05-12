@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <link rel="icon" type="image/png" href="fav-icon.png">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Facetas de Porcelana | Dr. Gabriel Mota</title>
-<link rel="icon" type="image/png" href="fav-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -200,23 +201,24 @@ h2.sec-title em{
   position:relative;
   width:100%;
   max-width:100%;
-  margin:0 auto;
+  margin:0;
   z-index:10;
   will-change:transform;
 }
 .hero-photo{
   width:100%;
-  max-height:600px;
+  max-height:500px;
   height:auto;
   display:block;
   object-fit:cover;
+  object-position:center center;
   filter:drop-shadow(0 20px 60px rgba(0,0,0,.15));
   position:relative;
   z-index:10;
   border-radius:20px;
 }
 @media(max-width:767px){
-  .hero-photo{max-height:450px}
+  .hero-photo{max-height:480px}
 }
 .hero-photo-wrap::after{
   content:'';
@@ -967,20 +969,20 @@ if (hero && heroContent && heroImage) {
         // Calcular progresso (0 a 1)
         const progress = Math.max(0, Math.min(1, -heroRect.top / heroHeight));
         
-        // Movimento do conteúdo (sobe ao scrollar)
-        const translateY = progress * -100;
+        // Movimento do conteúdo (sobe ao scrollar - mais suave)
+        const translateY = progress * -60;
         heroContent.style.transform = `translateY(${translateY}px)`;
         
-        // Rotação e escala da imagem (efeito 3D)
+        // Rotação e escala da imagem (efeito 3D mais sutil)
         const isMobile = window.innerWidth <= 768;
-        const rotateStart = isMobile ? 10 : 20;
-        const scaleStart = isMobile ? 0.7 : 1.05;
-        const scaleEnd = isMobile ? 0.9 : 1;
+        const rotateStart = isMobile ? 4 : 8;
+        const scaleStart = isMobile ? 0.92 : 1.02;
+        const scaleEnd = isMobile ? 0.96 : 1;
         
         const rotateX = rotateStart - (progress * rotateStart);
         const scale = scaleStart - (progress * (scaleStart - scaleEnd));
         
-        heroImage.style.transform = `perspective(1000px) rotateX(${rotateX}deg) scale(${scale})`;
+        heroImage.style.transform = `perspective(1200px) rotateX(${rotateX}deg) scale(${scale})`;
         
         ticking = false;
       });
