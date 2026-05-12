@@ -973,13 +973,13 @@ if (hero && heroContent && heroImage) {
         const translateY = progress * -60;
         heroContent.style.transform = `translateY(${translateY}px)`;
         
-        // Rotação e escala da imagem (efeito 3D mais sutil)
+        // Rotação e escala da imagem (efeito 3D INVERTIDO - começa reta, inclina ao scrollar)
         const isMobile = window.innerWidth <= 768;
-        const rotateStart = isMobile ? 4 : 8;
-        const scaleStart = isMobile ? 0.92 : 1.02;
-        const scaleEnd = isMobile ? 0.96 : 1;
+        const rotateEnd = isMobile ? -4 : -8;
+        const scaleStart = isMobile ? 1 : 1;
+        const scaleEnd = isMobile ? 0.96 : 0.98;
         
-        const rotateX = rotateStart - (progress * rotateStart);
+        const rotateX = progress * rotateEnd;
         const scale = scaleStart - (progress * (scaleStart - scaleEnd));
         
         heroImage.style.transform = `perspective(1200px) rotateX(${rotateX}deg) scale(${scale})`;
