@@ -27,7 +27,7 @@ img{display:block;max-width:100%}
   position:fixed;bottom:22px;right:18px;z-index:999;
   display:flex;align-items:center;gap:9px;
   background:linear-gradient(135deg,#25D366,#1aab55);
-  color:#fff;font-family:var(--font);font-size:14px;font-weight:600;
+  color:#ffffff;font-family:var(--font);font-size:14px;font-weight:600;
   padding:12px 18px 12px 14px;border-radius:100px;
   box-shadow:0 6px 28px rgba(37,211,102,.38);
   transition:transform .2s,box-shadow .2s;
@@ -38,7 +38,7 @@ img{display:block;max-width:100%}
 .wa-float.shake svg{animation:iconPulse .4s ease-in-out}
 
 /* ── TOPBAR ───────────────────────────────── */
-.topbar{background:var(--blue);color:#fff;text-align:center;font-size:13px;font-weight:500;letter-spacing:.02em;padding:9px 16px}
+.topbar{background:var(--blue);color:#ffffff;text-align:center;font-size:13px;font-weight:500;letter-spacing:.02em;padding:9px 16px}
 
 /* ── NAV ──────────────────────────────────── */
 nav{
@@ -57,7 +57,7 @@ nav{
 .logo-text{font-family:var(--font);font-size:16px;font-weight:800;letter-spacing:-.01em}
 .logo-text span{background:linear-gradient(90deg,var(--blue),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .nav-cta{
-  background:var(--blue);color:#fff;
+  background:var(--blue);color:#ffffff;
   font-family:var(--font);font-size:13px;font-weight:600;
   padding:9px 18px;border-radius:100px;transition:background .18s;
 }
@@ -82,7 +82,7 @@ section.alt .testi-author{color:rgba(255,255,255,.5)}
 section.alt .cred{color:rgba(255,255,255,.85)}
 section.alt .agit-box{background:rgba(255,255,255,.05);border-color:rgba(77,179,255,.45);border-left-color:var(--cyan)}
 section.alt .agit-box p{color:rgba(255,255,255,.75)}
-section.alt .agit-hl{color:#fff;border-left-color:var(--cyan)}
+section.alt .agit-hl{color:#ffffff;border-left-color:var(--cyan)}
 
 /* ── SEC HEADER ───────────────────────────── */
 .sec-tag{
@@ -103,21 +103,22 @@ h2.sec-title em{
 
 /* ── BTN ──────────────────────────────────── */
 .btn{
+  position:relative;
   display:inline-flex;
   align-items:center;
   justify-content:center;
   gap:8px;
-  background:var(--blue);
+  background:linear-gradient(135deg, #4db3ff 0%, #5dd7ff 50%, #7de5ff 100%);
   color:#fff;
   font-family:var(--font);
   font-size:15px;
   font-weight:700;
   padding:16px 32px;
-  border-radius:100px;
+  border-radius:12px;
   border:none;
   cursor:pointer;
-  box-shadow:0 6px 24px rgba(77,179,255,.32);
-  transition:background .18s,transform .18s,box-shadow .18s;
+  box-shadow:0 0 25px rgba(93,215,255,.6), 0 0 45px rgba(125,229,255,.4), 0 4px 15px rgba(77,179,255,.5);
+  transition:all .2s;
   text-align:center;
   white-space:normal;
   word-wrap:break-word;
@@ -125,6 +126,10 @@ h2.sec-title em{
   width:auto;
   max-width:100%;
 }
+.btn svg{
+  fill:#fff;
+}
+
 @media(max-width:767px){
   .btn{
     font-size:13px;
@@ -138,7 +143,10 @@ h2.sec-title em{
   }
   .btn svg{width:14px;height:14px;flex-shrink:0}
 }
-.btn:hover{background:var(--blue2);transform:translateY(-2px);box-shadow:0 10px 32px rgba(77,179,255,.42)}
+.btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 35px rgba(93,215,255,.8), 0 0 60px rgba(125,229,255,.5), 0 6px 20px rgba(77,179,255,.6);
+}
 .btn-full{display:flex;width:100%;justify-content:center;margin:0 auto}
 @media(max-width:767px){
   .btn-full .btn{min-width:0;max-width:100%;width:100%}
@@ -274,7 +282,7 @@ section.alt .dore-icon,section.alt .bene-svg{
 .step-n{
   flex-shrink:0;width:42px;height:42px;
   background:linear-gradient(135deg,var(--blue),var(--cyan));
-  border-radius:12px;color:#fff;font-size:18px;font-weight:800;
+  border-radius:12px;color:#ffffff;font-size:18px;font-weight:800;
   display:flex;align-items:center;justify-content:center;
 }
 .step strong{display:block;font-size:15px;font-weight:700;margin-bottom:3px}
@@ -314,7 +322,7 @@ section.alt .dore-icon,section.alt .bene-svg{
 .doc-pill{
   background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);
   backdrop-filter:blur(8px);border-radius:100px;padding:7px 14px;
-  font-size:12px;font-weight:600;color:#fff;white-space:nowrap;
+  font-size:12px;font-weight:600;color:#ffffff;white-space:nowrap;
 }
 
 /* ── CTA MID ──────────────────────────────── */
@@ -414,7 +422,7 @@ section.alt .dore-icon,section.alt .bene-svg{
 .cta-final-tag::before{content:'';width:28px;height:2px;background:var(--cyan);border-radius:2px}
 .cta-final h2{
   font-family:var(--font);
-  color:#fff;font-size:clamp(28px,7vw,42px);font-weight:800;
+  color:#ffffff;font-size:clamp(28px,7vw,42px);font-weight:800;
   margin-bottom:12px;position:relative;z-index:2;letter-spacing:-.02em;
 }
 .cta-final p{color:rgba(255,255,255,.65);margin-bottom:28px;position:relative;z-index:2;font-size:15px}
@@ -487,7 +495,7 @@ footer a{color:var(--cyan)}
 .foto-final-name{
   font-weight:800;
   font-size:20px;
-  color:#fff;
+  color:#ffffff;
   margin-bottom:4px;
 }
 .foto-final-spec{
